@@ -5,20 +5,24 @@
  */
 int main(void)
 {
-	int n = '0';
-	int m = '0';
+	int i, k = '0', j;
 
-	while (n <= '9')
+	for (i = '0'; i <= '9'; i++)
 	{
-	while (m <= '9')
-	{
-		if (!(n > m) || n == m)
+		for (j = k; j <= '9'; j++)
 		{
-			putchar(n);
-			putchar(m);
-			if (n == '8' && m == '9')
+			if (i != j)
 			{
-				putchar('\n');
+				putchar(i);
+				putchar(j);
+			}
+			if (i == j)
+			{
+				continue;
+			}
+			if (i == '8' && j == '9')
+			{
+				break;
 			}
 			else
 			{
@@ -26,12 +30,8 @@ int main(void)
 				putchar(' ');
 			}
 		}
-		m++;
-
+		k++;
 	}
-	m = '0';
-	n++;
-
-	}
-return (0);
+	putchar('\n');
+	return (0);
 }
