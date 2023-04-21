@@ -10,27 +10,27 @@ int main(void)
 
 	while (n <= '9')
 	{
-		while (m <= '9')
+	while (m <= '9')
+	{
+		if (!(n > m) || n == m)
 		{
-			if (!(n > m) || n == m)
+			putchar(n);
+			putchar(m);
+			if (n == '8' && m == '9')
 			{
-				putchar(n);
-				putchar(m);
-				if (n == '8' && m == '9')
-				{
-					putchar('\n');
-				}
-				else
-				{
-					putchar(',');
-					putchar(' ');
-				}
+				putchar('\n');
 			}
-			m++;
-
+			else
+			{
+				putchar(',');
+				putchar(' ');
+			}
 		}
-		m = '0';
-		n++;
+		m++;
+
+	}
+	m = '0';
+	n++;
 
 	}
 return (0);
