@@ -12,7 +12,7 @@ char *cap_string(char *s)
 
 	while (s[word])
 	{
-		while (!(s[word] >= 'a' && s[word] <= 'Z'))
+		while (!(s[word] >= 'a' && s[word] <= 'z'))
 			word++;
 
 		if (s[word - 1] == ' ' ||
@@ -20,7 +20,6 @@ char *cap_string(char *s)
 			s[word - 1] == '\n' ||
 			s[word - 1] == ',' ||
 			s[word - 1] == ';' ||
-			s[word - 1] == '.' ||
 			s[word - 1] == '.' ||
 			s[word - 1] == '!' ||
 			s[word - 1] == '?' ||
